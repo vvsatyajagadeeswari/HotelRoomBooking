@@ -31,12 +31,6 @@ public class BookedRooms
 	@Column(name="check_Out")
 	private LocalDate checkOutDate;
 	
-	/*@Column(name="customer_Fullname")
-	private String customerName;
-	
-	@Column(name="customer_Email")
-	private String customerEmail;*/
-	
 	@Column(name="adults")
 	private int numOfAudults;
 	
@@ -47,7 +41,7 @@ public class BookedRooms
 	private int totalNumOfCustomers;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="roomId")
+	@JoinColumn(name="room_id")
 	private Rooms rooms;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
